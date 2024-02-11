@@ -1,2 +1,2 @@
-# Don't Know
-Don't Know is a text to SQL query utility.
+# eZsql
+Natural language to SQL query generation using an open source LLM and retrieval-augmented generation.
