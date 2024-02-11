@@ -1,8 +1,8 @@
 import requests
 import mongo
 
-API_BASE_URL = "https://api.cloudflare.com/client/v4/accounts/bfa77c9395f9d84a019dd987b57983f9/ai/run/"
-headers = {"Authorization": "Bearer CMRzBi1PY5W-KS4Nf147dIzC9t15kZT34D1hR8Mi"}
+API_BASE_URL = "https://api.cloudflare.com/client/v4/accounts/{secret}/ai/run/"
+headers = {"Authorization": "Bearer {secret}"}
 
 def run(query,schema):
 	dbResponse = mongo.searchQuery(query);
