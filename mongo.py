@@ -1,10 +1,10 @@
 from pymongo import MongoClient
 # MongoDB Credentials
-# User: eZsql
-# Pass: Nh7RAwhVVN8nLAsc
+# User: {secret}
+# Pass: {secret}
 
 def get_database():
-    CONNECTION_STRING = "mongodb+srv://eZsql:Nh7RAwhVVN8nLAsc@ezsql-cache.y8dxf.mongodb.net/?retryWrites=true&w=majority"
+    CONNECTION_STRING = "{secret}"
     client = MongoClient(CONNECTION_STRING)
     return client['eZsql']
 
