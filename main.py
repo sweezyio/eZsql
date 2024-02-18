@@ -1,6 +1,6 @@
 from taipy.gui import Gui, notify
 import query as model
-import pyperclip
+# import pyperclip
 
 def generate_sql(state):
 	# Check if the user has put a topic
@@ -14,9 +14,9 @@ def generate_sql(state):
 		state.output = model.run(state.query,schema)
 		# state.output='test'
 		notify(state, "success", "SQL created!")
-def copy(state):
-	pyperclip.copy(state.output)
-	notify(state,'success','Copied to clipboard!')
+# def copy(state):
+# 	pyperclip.copy(state.output)
+# 	notify(state,'success','Copied to clipboard!')
 
 query=""
 output=""
@@ -40,7 +40,7 @@ This websites generates SQL queries using an [open-source CodeLlama 7B-AWQ](http
 <middle|
 ###&nbsp;
 <center><|Generate SQL|button|on_action=generate_sql|label=Generate SQL|></center>
-|>
+|middle>
 
 <output|
 ### Generated **SQL**{: .color-primary}
