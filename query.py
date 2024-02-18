@@ -1,8 +1,14 @@
 import requests
 import mongo
+from dotenv import load_dotenv
+from os import getenv
 
-API_BASE_URL = "https://api.cloudflare.com/client/v4/accounts/{secret}/ai/run/"
-headers = {"Authorization": "Bearer {secret}"}
+load_dotenv()
+
+api=getenv('API')
+auth=getenv('AUTH')
+API_BASE_URL = f"https://api.cloudflare.com/client/v4/accounts/{api}/ai/run/"
+headers = {"Authorization": f"Bearer {auth}"}
 
 def run(query,schema):
 	dbResponse = mongo.searchQuery(query);
